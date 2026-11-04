@@ -1,0 +1,1 @@
+window.SHANHAI_CONFIG=Object.freeze({supabaseUrl:'',supabaseKey:'',table:'shanhai_scores'});

@@ -1,0 +1,14 @@
+(function(g){
+const KEY='shanhai-v3-scores';
+function valid(r){return r&&typeof r.player_name==='string'&&r.player_name.length<=12&&typeof r.character_name==='string'&&GameData.characters.some(c=>c.name===r.character_name)&&['good','normal'].includes(r.ending_type)&&Number.isInteger(r.clear_time_ms)&&r.clear_time_ms>0&&r.clear_time_ms<=86400000&&Number.isInteger(r.clues_collected)&&r.clues_collected>=0&&r.clues_collected<=3&&typeof r.created_at==='string'&&!isNaN(Date.parse(r.created_at));}
+function sort(rows){return rows.filter(valid).sort((a,b)=>a.clear_time_ms-b.clear_time_ms||a.created_at.localeCompare(b.created_at));}
+class Board {
+constructor(config){this.config=config;this.cloud=!!(config.supabaseUrl&&config.supabaseKey);this.memory=[];this.storageOK=true;}
+local(){try{const rows=JSON.parse(localStorage.getItem(KEY)||'[]');return sort(Array.isArray(rows)?rows:[]);}catch(e){this.storageOK=false;return sort(this.memory);}}
+async save(record){if(!valid(record))throw Error('成績資料不完整');const rows=this.local();if(!rows.some(x=>x.run_id===record.run_id))rows.push(record);this.memory=sort(rows).slice(0,200);try{localStorage.setItem(KEY,JSON.stringify(this.memory));}catch(e){this.storageOK=false;}
+if(this.cloud){try{await this.request('POST','',record);return 'cloud';}catch(e){const err=Error('已保留本機紀錄；共用排行榜送出失敗：'+e.message);err.localSaved=true;throw err;}}return this.storageOK?'local':'memory';}
+async list(source='local',type='good'){let rows;if(source==='cloud'){if(!this.cloud)throw Error('尚未設定 Supabase');rows=await this.request('GET','?select=run_id,player_name,character_name,ending_type,clear_time_ms,clues_collected,created_at&ending_type=eq.'+encodeURIComponent(type)+'&order=clear_time_ms.asc,created_at.asc&limit=100');}else rows=this.local();return sort(rows).filter(r=>r.ending_type===type).slice(0,100);}
+async request(method,query='',body){const c=this.config;const base=c.supabaseUrl.replace(/\/$/,'');if(!/^https:\/\/[a-z0-9.-]+$/i.test(base))throw Error('Supabase URL 必須是 HTTPS 專案網域');if(!/^[a-z_][a-z0-9_]*$/.test(c.table))throw Error('資料表名稱不正確');const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),8000);try{const response=await fetch(base+'/rest/v1/'+c.table+query,{method,signal:controller.signal,headers:{apikey:c.supabaseKey,...(c.supabaseKey.startsWith('eyJ')?{Authorization:'Bearer '+c.supabaseKey}:{}),'Content-Type':'application/json',Prefer:'return=minimal,resolution=ignore-duplicates'},body:body?JSON.stringify(body):undefined});if(!response.ok)throw Error('HTTP '+response.status+'，請檢查公開金鑰與 RLS 設定');return method==='GET'?await response.json():null;}catch(e){if(e.name==='AbortError')throw Error('連線逾時');throw e;}finally{clearTimeout(timeout);}}
+}
+g.Leaderboard={Board,valid,sort};
+})(window);

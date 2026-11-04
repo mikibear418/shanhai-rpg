@@ -1,0 +1,282 @@
+[
+  {
+    "id": "teacher",
+    "text": "林若棠。停電後，林澄的朋友不見了。公告欄有一張陌生地圖。出發前先看官方天氣、潮汐與校方公告，別照來路不明的地圖走。",
+    "pitch": -2,
+    "rate": -1,
+    "age": 48,
+    "gender": "female",
+    "voice": "Hanhan",
+    "speaker": "teacher"
+  },
+  {
+    "id": "guard",
+    "text": "陳守安。施工圍籬後有陌生人招手。不要跟進去，我會通知校方。去山徑只能走開放的標示步道，天候惡化就撤退。",
+    "pitch": -3,
+    "rate": -1,
+    "age": 52,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "guard"
+  },
+  {
+    "id": "student",
+    "text": "林澄。我朋友去了海邊，還沒回來。我看到一個人把錯誤地圖放上公告欄。請先告訴老師，不要一個人追他！",
+    "pitch": 5,
+    "rate": 1,
+    "age": 15,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "student"
+  },
+  {
+    "id": "guide",
+    "text": "羅景川。霧變濃了。請留在原有標示步道，確認路標與返回方向，遠離溪床、邊坡和山稜。雷雨來時不要上高處，也不要在孤立樹下避雨。",
+    "pitch": -4,
+    "rate": -2,
+    "age": 68,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "guide"
+  },
+  {
+    "id": "hiker",
+    "text": "梅知夏。我聽見海岸有求救聲。別抄近路下溪谷！先記錄位置、確認安全撤退路線，再把線索交給救援人員。",
+    "pitch": 0,
+    "rate": 0,
+    "age": 28,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "hiker"
+  },
+  {
+    "id": "captain",
+    "text": "吳海岳。海水已越過第一道安全線。洞穴會被潮水封住。即使有繩索，也不該讓沒有訓練的學生進去。請在安全高處通報，交給專業救援隊。",
+    "pitch": -4,
+    "rate": -2,
+    "age": 67,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "captain"
+  },
+  {
+    "id": "volunteer",
+    "text": "安予晴。我帶來救援無線電。把背包上的姓名和洞口位置告訴我，我會通報救援隊。請退到警戒線外，別再靠近浪區。",
+    "pitch": 1,
+    "rate": 0,
+    "age": 24,
+    "gender": "female",
+    "voice": "Hanhan",
+    "speaker": "volunteer"
+  },
+  {
+    "id": "commander",
+    "text": "江岑。我們收到求救位置，已由專業隊員完成救援。謝謝你選擇通報和撤離。真正的勇敢，是保護自己，也讓支援找得到人。",
+    "pitch": -2,
+    "rate": -1,
+    "age": 36,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "commander"
+  },
+  {
+    "id": "rescued",
+    "text": "葉汐。謝謝你沒有自己衝進洞穴。救援隊找到我了。我以後會先查潮汐、告訴老師行程，也不會獨自去礁岩。",
+    "pitch": 4,
+    "rate": 1,
+    "age": 16,
+    "gender": "female",
+    "voice": "Hanhan",
+    "speaker": "rescued"
+  },
+  {
+    "id": "stranger",
+    "text": "陌生旅人。我知道失蹤學生在哪裡。跟著我穿過圍籬，走捷徑，別告訴其他人。",
+    "pitch": -3,
+    "rate": -1,
+    "age": 43,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "stranger"
+  },
+  {
+    "id": "skill-soma",
+    "text": "澤見蒼真。水痕觀察。辨識水痕與潮汐；技能顯示本場景調查提示，回復 6 體力。",
+    "pitch": 3,
+    "rate": 1,
+    "age": 17,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "soma"
+  },
+  {
+    "id": "skill-subaru",
+    "text": "霆野昴。聽風辨雷。天候警戒；技能使移動速度提升 35%，持續 20 秒，回復 5 體力。",
+    "pitch": 4,
+    "rate": 1,
+    "age": 16,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "subaru"
+  },
+  {
+    "id": "skill-kiba",
+    "text": "野嶺牙。山徑直覺。山區移動消耗減半；技能回復 12 體力並指出安全路線。",
+    "pitch": -2,
+    "rate": 0,
+    "age": 32,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "kiba"
+  },
+  {
+    "id": "skill-mio",
+    "text": "蝶宮澪。急救分析。技能回復 25 體力；先確認自身安全，再協助他人。",
+    "pitch": 1,
+    "rate": 0,
+    "age": 22,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "mio"
+  },
+  {
+    "id": "skill-nagi",
+    "text": "霧島凪。靜水判讀。所有場景移動消耗減半；技能回復 8 體力並提示海岸危險。",
+    "pitch": 1,
+    "rate": -1,
+    "age": 20,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "nagi"
+  },
+  {
+    "id": "skill-rin",
+    "text": "花守鈴。守護之力。救援物資搬運者；技能回復 18 體力並整理本場景任務。",
+    "pitch": 3,
+    "rate": 1,
+    "age": 19,
+    "gender": "female",
+    "voice": "Hanhan",
+    "speaker": "rin"
+  },
+  {
+    "id": "skill-saku",
+    "text": "緋月朔。觀人辨險。技能辨識陌生人的誘導話術、提示安全選擇，回復 10 體力。",
+    "pitch": -3,
+    "rate": -1,
+    "age": 29,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "saku"
+  },
+  {
+    "id": "skill-retsu",
+    "text": "赤城烈。危險感知。技能指出高風險區，回復 15 體力；不以冒進換取速度。",
+    "pitch": -1,
+    "rate": 1,
+    "age": 27,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "retsu"
+  },
+  {
+    "id": "skill-byakuya",
+    "text": "冬城白夜。寒境耐受。山區與海岸移動消耗減半；技能回復 18 體力。",
+    "pitch": 1,
+    "rate": -1,
+    "age": 20,
+    "gender": "male",
+    "voice": "Zhiwei",
+    "speaker": "byakuya"
+  },
+  {
+    "id": "skill-genya",
+    "text": "月代玄夜。夜行明察。技能加亮場景 25 秒並顯示調查提示，回復 8 體力。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 22,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "genya"
+  },
+  {
+    "id": "scene-school",
+    "text": "黑板上的海潮線。放學鐘聲後，校園忽然停電。公告欄上多了一張海岸地圖；林澄的朋友遲遲沒有回來。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "scene-mountain",
+    "text": "濃霧裡的腳印。泥地上的腳印分成兩路：一條通向標示步道，另一條消失在溪床旁。霧正越來越厚。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "scene-sea",
+    "text": "漲潮前的求救聲。背包落在警戒線內側的安全步道上。海水正淹過礁岩，洞穴深處傳來求救聲。切勿踏入浪區。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "scene-station",
+    "text": "讓每個人平安回家。救援站的燈亮著。專業隊伍帶回受困同學，海潮聲逐漸遠去。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "ending-good",
+    "text": "守護山海的約定。你查證資訊、確認路線並提供完整線索，專業救援隊及時找回葉汐。大家平安回到學校。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "ending-normal",
+    "text": "帶著遺憾的平安。你及時撤離並通報，葉汐最終獲救。但缺少調查線索讓救援定位花了更多時間。下次先準備、再出發。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "ending-bad",
+    "text": "被海霧吞沒的線索。你忽略警戒與查證，冒進迫使隊伍撤離，救援也因此延誤。這次選擇提醒你：速度不能取代安全。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  },
+  {
+    "id": "ending-stop",
+    "text": "雷雨下的返回方向。天候或體力已不適合繼續。冒險在這裡停止，先保暖、留在安全位置並請求支援。",
+    "pitch": 0,
+    "rate": -1,
+    "age": 35,
+    "gender": "female",
+    "voice": "Yating",
+    "speaker": "narrator"
+  }
+]
