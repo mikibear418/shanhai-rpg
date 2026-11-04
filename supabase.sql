@@ -1,3 +1,4 @@
+begin;
 -- Supabase SQL Editor：建立公開教學用共用排行榜。僅供讀取／新增，不開放修改或刪除。
 -- 此版是可信班級的休閒榜，前端計時可被修改，不適合獎金或正式競賽。
 create table if not exists public.shanhai_scores (
@@ -20,3 +21,35 @@ create policy shanhai_scores_read on public.shanhai_scores for select to anon,au
 create policy shanhai_scores_add on public.shanhai_scores for insert to anon,authenticated with check (
   ending_type in ('good','normal') and clear_time_ms between 1 and 86400000 and clues_collected between 0 and 3
 );
+
+-- 每種結局僅保留最快15筆（總上限30），資料庫強制執行。
+-- 在新增前以交易鎖序列化寫入，避免多人同時送出時超過上限。
+create or replace function public.shanhai_before_score_insert()
+returns trigger language plpgsql security definer set search_path = pg_catalog as $fn$
+begin
+  perform pg_catalog.pg_advisory_xact_lock(41730015);
+  new.created_at := pg_catalog.clock_timestamp();
+  return new;
+end;
+$fn$;
+create or replace function public.shanhai_trim_scores()
+returns trigger language plpgsql security definer set search_path = pg_catalog as $fn$
+begin
+  delete from public.shanhai_scores as scores using (
+    select run_id, row_number() over (
+      partition by ending_type order by clear_time_ms asc, created_at asc, run_id asc
+    ) as rn from public.shanhai_scores
+  ) as ranked where scores.run_id=ranked.run_id and ranked.rn>15;
+  return null;
+end;
+$fn$;
+revoke all on function public.shanhai_before_score_insert() from public,anon,authenticated;
+revoke all on function public.shanhai_trim_scores() from public,anon,authenticated;
+drop trigger if exists shanhai_before_score_insert on public.shanhai_scores;
+create trigger shanhai_before_score_insert before insert on public.shanhai_scores
+for each row execute function public.shanhai_before_score_insert();
+drop trigger if exists shanhai_trim_scores on public.shanhai_scores;
+create trigger shanhai_trim_scores after insert on public.shanhai_scores
+for each statement execute function public.shanhai_trim_scores();
+
+commit;
