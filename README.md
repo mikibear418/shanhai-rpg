@@ -8,7 +8,7 @@
 WASD／方向鍵移動，E互動，空白鍵技能；也可點地面或人物自動走近。完整教學位於遊戲右上角。音樂與人物配音在點開始後解鎖，可獨立靜音。
 
 ## 排行榜
-預設使用本機排行榜。共用榜請在自己的Supabase專案執行supabase.sql，並在config.js填入Project URL與公開publishable／anon key。不得放入secret或service_role金鑰。
+本站已連接Supabase共用排行榜，預設顯示共用榜，並保留本機榜分頁。前端僅使用公開publishable key。每個結局榜最多15筆，超出會從資料庫刪除，合計最多30筆。不含管理金鑰。
 
 ## 素材
 四場景、20人物透明圖集、10角色四步態動畫、7首原創音樂與28段繁中配音。素材來源與授權見LICENSES.md；人物年齡與聲線見VOICE-CAST.md。
