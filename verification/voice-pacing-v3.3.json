@@ -1,0 +1,170 @@
+[
+  {
+    "id": "teacher",
+    "rate": 0,
+    "durationSeconds": 15.21,
+    "charsPerSecond": 3.42
+  },
+  {
+    "id": "guard",
+    "rate": 0,
+    "durationSeconds": 15.3,
+    "charsPerSecond": 3.14
+  },
+  {
+    "id": "student",
+    "rate": 0,
+    "durationSeconds": 15.21,
+    "charsPerSecond": 3.16
+  },
+  {
+    "id": "guide",
+    "rate": 0,
+    "durationSeconds": 16.37,
+    "charsPerSecond": 3.36
+  },
+  {
+    "id": "hiker",
+    "rate": 0,
+    "durationSeconds": 15.3,
+    "charsPerSecond": 3.6
+  },
+  {
+    "id": "captain",
+    "rate": 0,
+    "durationSeconds": 16.72,
+    "charsPerSecond": 3.17
+  },
+  {
+    "id": "volunteer",
+    "rate": 0,
+    "durationSeconds": 12.83,
+    "charsPerSecond": 3.66
+  },
+  {
+    "id": "commander",
+    "rate": 0,
+    "durationSeconds": 14.85,
+    "charsPerSecond": 3.64
+  },
+  {
+    "id": "rescued",
+    "rate": 0,
+    "durationSeconds": 13.9,
+    "charsPerSecond": 3.53
+  },
+  {
+    "id": "stranger",
+    "rate": 0,
+    "durationSeconds": 14.25,
+    "charsPerSecond": 2.81
+  },
+  {
+    "id": "skill-soma",
+    "rate": 0,
+    "durationSeconds": 6.53,
+    "charsPerSecond": 3.37
+  },
+  {
+    "id": "skill-subaru",
+    "rate": 0,
+    "durationSeconds": 7.02,
+    "charsPerSecond": 2.71
+  },
+  {
+    "id": "skill-kiba",
+    "rate": 0,
+    "durationSeconds": 6.66,
+    "charsPerSecond": 3.45
+  },
+  {
+    "id": "skill-mio",
+    "rate": 0,
+    "durationSeconds": 4.49,
+    "charsPerSecond": 3.56
+  },
+  {
+    "id": "skill-nagi",
+    "rate": 0,
+    "durationSeconds": 5.77,
+    "charsPerSecond": 3.29
+  },
+  {
+    "id": "skill-rin",
+    "rate": 0,
+    "durationSeconds": 5.55,
+    "charsPerSecond": 3.78
+  },
+  {
+    "id": "skill-saku",
+    "rate": 0,
+    "durationSeconds": 6.03,
+    "charsPerSecond": 3.32
+  },
+  {
+    "id": "skill-retsu",
+    "rate": 0,
+    "durationSeconds": 5.62,
+    "charsPerSecond": 3.2
+  },
+  {
+    "id": "skill-byakuya",
+    "rate": 0,
+    "durationSeconds": 6.81,
+    "charsPerSecond": 2.79
+  },
+  {
+    "id": "skill-genya",
+    "rate": 0,
+    "durationSeconds": 6.51,
+    "charsPerSecond": 3.69
+  },
+  {
+    "id": "scene-school",
+    "rate": 0,
+    "durationSeconds": 9.53,
+    "charsPerSecond": 3.57
+  },
+  {
+    "id": "scene-mountain",
+    "rate": 0,
+    "durationSeconds": 9.11,
+    "charsPerSecond": 3.62
+  },
+  {
+    "id": "scene-sea",
+    "rate": 0,
+    "durationSeconds": 11.62,
+    "charsPerSecond": 3.61
+  },
+  {
+    "id": "scene-station",
+    "rate": 0,
+    "durationSeconds": 7.22,
+    "charsPerSecond": 3.32
+  },
+  {
+    "id": "ending-good",
+    "rate": 0,
+    "durationSeconds": 9.88,
+    "charsPerSecond": 3.54
+  },
+  {
+    "id": "ending-normal",
+    "rate": 0,
+    "durationSeconds": 11.98,
+    "charsPerSecond": 3.34
+  },
+  {
+    "id": "ending-bad",
+    "rate": 0,
+    "durationSeconds": 10.65,
+    "charsPerSecond": 3.57
+  },
+  {
+    "id": "ending-stop",
+    "rate": 0,
+    "durationSeconds": 9.33,
+    "charsPerSecond": 3.43
+  }
+]

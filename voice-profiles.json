@@ -3,15 +3,15 @@
     "age": 17,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": 3,
-    "rate": 1
+    "pitch": 2,
+    "rate": 0
   },
   "subaru": {
     "age": 16,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": 4,
-    "rate": 1
+    "pitch": 2,
+    "rate": 0
   },
   "kiba": {
     "age": 32,
@@ -32,70 +32,70 @@
     "gender": "male",
     "voice": "Zhiwei",
     "pitch": 1,
-    "rate": -1
+    "rate": 0
   },
   "rin": {
     "age": 19,
     "gender": "female",
     "voice": "Hanhan",
-    "pitch": 3,
-    "rate": 1
+    "pitch": 2,
+    "rate": 0
   },
   "saku": {
     "age": 29,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": -3,
-    "rate": -1
+    "pitch": -2,
+    "rate": 0
   },
   "retsu": {
     "age": 27,
     "gender": "male",
     "voice": "Zhiwei",
     "pitch": -1,
-    "rate": 1
+    "rate": 0
   },
   "byakuya": {
     "age": 20,
     "gender": "male",
     "voice": "Zhiwei",
     "pitch": 1,
-    "rate": -1
+    "rate": 0
   },
   "genya": {
     "age": 22,
     "gender": "female",
     "voice": "Yating",
     "pitch": 0,
-    "rate": -1
+    "rate": 0
   },
   "teacher": {
     "age": 48,
     "gender": "female",
     "voice": "Hanhan",
     "pitch": -2,
-    "rate": -1
+    "rate": 0
   },
   "guard": {
     "age": 52,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": -3,
-    "rate": -1
+    "pitch": -2,
+    "rate": 0
   },
   "student": {
     "age": 15,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": 5,
-    "rate": 1
+    "pitch": 2,
+    "rate": 0
   },
   "guide": {
     "age": 68,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": -4,
-    "rate": -2
+    "pitch": -2,
+    "rate": 0
   },
   "hiker": {
     "age": 28,
@@ -108,8 +108,8 @@
     "age": 67,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": -4,
-    "rate": -2
+    "pitch": -2,
+    "rate": 0
   },
   "volunteer": {
     "age": 24,
@@ -123,27 +123,27 @@
     "gender": "female",
     "voice": "Yating",
     "pitch": -2,
-    "rate": -1
+    "rate": 0
   },
   "rescued": {
     "age": 16,
     "gender": "female",
     "voice": "Hanhan",
-    "pitch": 4,
-    "rate": 1
+    "pitch": 2,
+    "rate": 0
   },
   "stranger": {
     "age": 43,
     "gender": "male",
     "voice": "Zhiwei",
-    "pitch": -3,
-    "rate": -1
+    "pitch": -2,
+    "rate": 0
   },
   "narrator": {
     "age": 35,
     "gender": "female",
     "voice": "Yating",
     "pitch": 0,
-    "rate": -1
+    "rate": 0
   }
 }

@@ -14,3 +14,6 @@ portraits.png ← original-companions-atlas.png
 assets/voices/*.wav 為原創台詞經已安裝的 Microsoft Zhiwei／Yating／Hanhan 繁中 OneCore 聲線 產生之合成語音輸出。voice-lines.json 保留完整台詞及語音參數。沒有打包 Microsoft 語音引擎、模型、字型或系統程式。不是演員錄音或個人聲音複製。配音輸出不套用上方專屬音樂的 CC0 宣告；語音引擎之權利及使用條件屬其提供者。
 ## 遊戲程式與文本
 本次新增原始碼及文本交付使用者作本專案使用、修改與部署。legacy/ 為使用者既有程式備份。沒有第三方 JS 函式庫或外連字型。
+
+## v3.3 場景物件圖集
+assets/props-v3.3.png：以內建 ImageGen 依原創描述生成的九格透明物件圖集，直接用於本遊戲；不是外部遊戲素材。完整生成提示與規格見 ART-PROMPT-v3.3.md。原有人物、背景與音樂授權沿用以上紀錄。
