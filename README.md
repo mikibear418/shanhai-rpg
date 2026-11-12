@@ -15,10 +15,11 @@
 - 雲端上傳失敗，待傳佇列各結局最多保留最快15筆；可於結局畫面或排行榜「重新送出待傳成績」重試。佇列是暫存，不是歷史成績表；超出佇列上限的較慢成績不保留。重試沿用回合ID與紀錄時間，避免重複。
 - 共用榜以 Supabase 伺服器收到時間處理同分順序，因此本機與共用榜同分先後可能不同。
 
-## 目前雲端阻礙（2026-11-12）
-config.js 的既有公開設定保留，但 `tbndfsjegnrignnigmmm.supabase.co` 在本次 DNS 查詢回報名稱不存在；supabase.co 與正式遊戲網站可連線。無法據此判斷專案是暫停、刪除或網址已變更。
-因此不能宣稱多人共用榜已恢復，也無法執行此專案的真實 REST 讀寫及線上 RLS 驗證。本次 Chrome 雲端成功／權限失敗流程使用模擬 REST，沒有向正式榜插入測試成績。
-需恢復原 Supabase 專案，或在 config.js 填入可用的 Project URL、公開 publishable key；勿放 service_role/secret key。
+## 共用榜已恢復（2026-11-12）
+原 Supabase 專案因暫停而無法連線，現已從原組織的 Free 免費方案恢復；未升級方案或啟用付費功能。config.js 既有 Project URL 與 publishable key 可繼續使用，無需換專案。
+公開金鑰 REST 查榜實測 HTTP200；正式網站成功與普通分榜均顯示 Supabase 共用榜。資料庫原本0筆，並非讀榜失敗。
+匿名角色交易內插入每榜22筆，確認各保留最快15筆，再插入更快成績驗證擠下第15名，所有測試最後回滾，正式榜仍0筆。RLS開啟，匿名SELECT/INSERT允許，UPDATE/DELETE禁止，原本2個policies及2個triggers均保留。
+免費方案可能因7天低使用量再度自動暫停；上課前先開啟專案控制台及網站排行榜確認，需要時使用Resume恢復。未設定自動保活、付費訂閱或額外服務。官方說明：https://supabase.com/docs/guides/platform/free-project-pausing
 
 ## 資料庫設定與驗證
 1. 可用專案的 SQL Editor 執行 supabase-diagnostics.sql，唯讀檢查欄位、主鍵、RLS、匿名角色授權與觸發器。

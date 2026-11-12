@@ -23,9 +23,19 @@
 - 320與390px viewport：頁面不水平溢出，排行榜表格在容器內捲動。非真實 iOS/Android 裝置測試。
 - Chrome REST 使用模擬資料，未向正式榜寫測試成績。結果見 verification/browser-results.json，手機截圖見 verification/mobile-leaderboard.png。
 
-## 雲端驗證界線
+## 初次修復時的雲端驗證界線（以下為歷史狀態）
 正式遊戲首頁HTTP200。既有Supabase專案子網域DNS名稱不存在，REST請求失敗ENOTFOUND；supabase.co可正常解析。因此無法實測該資料庫的SELECT/INSERT/RLS、觸發器或共用排名；未假設其資料為空，未刪除任何雲端成績。
 僅能以模擬測試驗證前端權限錯誤、逾時、備援及重試行為。真正多人共用需恢復或更換有效Supabase專案。
 
 ## 部署
 部署結果另見工作區 DEPLOYMENT-v3.2.2.md；以實際遠端 commit 與正式頁面版本檢查為準。
+
+## 2026-11-12 免費方案恢復與真實資料庫驗證
+已經使用者同意，在原組織Free方案執行Resume；控制台顯示Restoration complete，組織仍標示FREE。未升級或啟用付費功能。
+- 現有公開publishable key的REST SELECT：HTTP200，回傳[]；保留原Project URL及金鑰。
+- SQL Editor先唯讀確認正式資料表0筆、RLS開啟。
+- supabase-verify.sql在真實資料庫執行：以anon角色各新增22筆成功與普通成績，驗證每榜15筆、淘汰慢成績及更快成績擠下第15名。交易完成ROLLBACK，正式成績仍0筆。
+- 回滾後實際結果：rls=true、read=true、insert=true、update=false、delete=false、policies=2、triggers=2。
+- 正式網站在登入Supabase之外的遊戲分頁，以現有前端公開設定讀取成功及普通分榜，均顯示「Supabase 共用榜 · 每榜僅保留前15名」。
+- 沒有提交會永久留在正式排行榜的瀏覽器測試成績；正向寫入驗證是在資料庫anon角色交易內進行，並非瀏覽器完整通關後持久化REST POST實測。
+本節取代先前DNS阻礙：多人共用榜現在已恢復連線。免費方案仍可能因低使用量自動暫停。
