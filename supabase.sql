@@ -14,6 +14,7 @@ create table if not exists public.shanhai_scores (
 create index if not exists shanhai_scores_time_idx on public.shanhai_scores(ending_type,clear_time_ms,created_at);
 alter table public.shanhai_scores enable row level security;
 revoke all on public.shanhai_scores from anon,authenticated;
+grant usage on schema public to anon,authenticated;
 grant select,insert on public.shanhai_scores to anon,authenticated;
 drop policy if exists shanhai_scores_read on public.shanhai_scores;
 drop policy if exists shanhai_scores_add on public.shanhai_scores;
